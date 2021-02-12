@@ -1,0 +1,19 @@
+{
+    "userData": [
+        {
+            "status": 1,
+            "username": "admin",
+            "password": "admin"
+        },
+        {
+            "status": 1,
+            "username": "xiaoli",
+            "password": "12345"
+        },
+        {
+            "status": 1,
+            "username": "dagao",
+            "password": "23456"
+        }
+    ]
+}
