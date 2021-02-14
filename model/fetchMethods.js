@@ -15,6 +15,18 @@ let getUserData = (req, callback) => {
     })
 }
 
+let getCategoryData = (req, callback) => {
+    fs.readFile('data/category.json', (err, data) => {
+        if (err) {
+            callback(err);
+            return;
+        }
+        data = JSON.parse(data.toString())
+        callback(null, JSON.stringify(data.data));
+    })
+}
+
 module.exports = {
     getUserData,
+    getCategoryData
 }
