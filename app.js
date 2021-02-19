@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 // 跨域
 app.use(cors());
+// 静态资源
+app.use(express.static('static'));
 
 app
     .use(router)

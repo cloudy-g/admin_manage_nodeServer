@@ -1,19 +1,47 @@
 {
     "userData": [
         {
-            "status": 1,
-            "username": "admin",
-            "password": "admin"
+            "name": "admin",
+            "password": "admin",
+            "tel": "-",
+            "create_time": "-",
+            "Email": "-",
+            "charactor": [
+                "超级管理员"
+            ]
         },
         {
-            "status": 1,
-            "username": "xiaoli",
-            "password": "12345"
+            "name": "xiaogao",
+            "password": "12345",
+            "tel": "12313213212",
+            "Email": "13552335370@163.com",
+            "charactor": [
+                "前端开发"
+            ],
+            "create_time": "2021-02-18 23:06:48",
+            "key": "2021-02-18 23:06:48"
         },
         {
-            "status": 1,
-            "username": "dagao",
-            "password": "23456"
+            "name": "xiaochu",
+            "password": "22222",
+            "tel": "12313213334",
+            "Email": "22222@goole.com",
+            "charactor": [
+                "后端"
+            ],
+            "create_time": "2021-02-18 23:07:51",
+            "key": "2021-02-18 23:07:51"
+        },
+        {
+            "name": "xiaoshi",
+            "password": "2222221",
+            "tel": "12313214455",
+            "Email": "22221212@goole.com",
+            "charactor": [
+                "前端开发"
+            ],
+            "create_time": "2021-02-18 23:10:22",
+            "key": "2021-02-18 23:10:22"
         }
     ]
 }
