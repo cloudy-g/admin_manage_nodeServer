@@ -189,7 +189,6 @@ const updateCharactor = (req, callback) => {
             tem = req;
             data[index] = tem;
         }
-        // console.log();
         fs.writeFile('data/charactor.json', JSON.stringify({
             data: data
         }), () => {
@@ -208,7 +207,6 @@ const delCharactor = (name, callback) => {
         data = data.data;
         let index = data.findIndex(v => v.name == name);
         data.splice(index, 1);
-        // console.log();
         fs.writeFile('data/charactor.json', JSON.stringify({
             data: data
         }), () => {
@@ -226,7 +224,6 @@ const getTargetCharctor = (type, callback) => {
         data = JSON.parse(data.toString())
         data = data.data;
         let tem = data.find(v => type === v.name);
-        console.log(tem);
         callback(null, JSON.stringify(tem));
     })
 }

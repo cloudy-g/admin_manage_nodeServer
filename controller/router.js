@@ -130,9 +130,6 @@ router // 对用户进行验证登录信息
             res.send(data);
         })
     })
-    .use((req, res) => {
-        res.send('404');
-    })
 
 module.exports = {
     router
