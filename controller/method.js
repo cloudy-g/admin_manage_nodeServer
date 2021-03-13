@@ -7,8 +7,10 @@ const findUser = (data, target) => {
   })
   if (!ans) {
     return {
-      status: 0,
-      msg: '用户名或密码错误'
+      data: {
+        status: 0,
+        msg: '用户名或密码错误'
+      }
     }
   }
   return ans;
@@ -71,10 +73,16 @@ const insertProduct = (prod, categoryData) => {
   spliceById(pid, categoryData);
   insertByType(type, categoryData, 0, prod);
 }
-
+let token = new Map();
+const setToken = (tokenKey, newVal) => {
+  // token = newVal;
+  token.set(tokenKey, newVal);
+}
 
 module.exports = {
   findUser,
   updateProductCategory,
-  insertProduct
+  insertProduct,
+  setToken,
+  token
 }

@@ -18,16 +18,38 @@ let multer = require('multer')
 let upload = multer({
     dest: 'static/upload'
 })
+let {
+    token
+} = require('./method');
 
 router // 对用户进行验证登录信息
     .post('/login', (req, res, next) => {
+        let val = req.headers['accesstoken'];
+        if (val != undefined && token.get(val) != undefined) {
+            console.log(token.get(val));
+            res.send(JSON.stringify(token.get(val)));
+            return;
+        }
         getUserData(req.body, (err, data) => {
             if (err) {
                 next(err);
             }
             res.send(data);
         })
-    }) // 获取分类信息
+    })
+    // 处理 token
+    // .get('/', (req, res, next) => {
+    //     let val = req.headers['accesstoken'];
+    //     if (val != undefined && token[val] != undefined) {
+    //         next();
+    //     } else {
+    //         let data = {
+    //             message: '请登录',
+    //             status: 1
+    //         }
+    //         res.send(JSON.stringify(data));
+    //     }
+    // }) // 获取分类信息
     .get('/category', (req, res, next) => {
         getCategoryData(req, (err, data) => {
             if (err) {

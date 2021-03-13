@@ -2,7 +2,8 @@ const fs = require('fs');
 const {
     findUser,
     updateProductCategory,
-    insertProduct
+    insertProduct,
+    setToken
 } = require('../controller/method')
 // 获取所有用户数据
 const getUsersData = callback => {
@@ -67,6 +68,8 @@ const getUserData = (req, callback) => {
             return;
         }
         let ans = findUser(data, req);
+        setToken(ans.name, ans);
+        ans.token = ans.name;
         callback(null, JSON.stringify(ans));
     })
 }
